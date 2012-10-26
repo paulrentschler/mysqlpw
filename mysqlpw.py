@@ -49,6 +49,9 @@ class MySQLpw(object):
                         print "FAILED: could not connect to the database.\n";
 
                     else:
+                        cursor = self.dbConnection.cursor()
+                        cursor.execute("SET PASSWORD = PASSWORD(%s)", (newPw,))
+                        cursor.close()
                         print "Password changed.\n";
                     
                     break
