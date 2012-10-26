@@ -35,20 +35,20 @@ class MySQLpw(object):
            their current password then the new one (twice).
            """
         if self.args.user is not None and self.args.user != "":
-            currentPw = getpass("Current password for "+self.args.user+": ")
+            currentPw = getpass.getpass("Current password for "+self.args.user+": ")
             while True:
-                newPw = getpass("New password: ")
-                confirmPw = getpass("Confirm new password: ")
+                newPw = getpass.getpass("New password: ")
+                confirmPw = getpass.getpass("Confirm new password: ")
 
                 if newPw != confirmPw:
-                    print "Passwords did not match!\n\n";
+                    print "Passwords did not match!\n";
 
                 else:
-                    print "Password changed.\n\n";
+                    print "Password changed.\n";
                     break
 
         else:
-            print "ERROR: no user specified.\n\n";
+            print "ERROR: no user specified.\n";
 
 
 
