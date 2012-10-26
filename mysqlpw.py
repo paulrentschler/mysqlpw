@@ -45,7 +45,7 @@ class MySQLpw(object):
                     print "Passwords did not match!\n";
 
                 else:
-                    if !connectToDatabase(self.args.user, currentPw):
+                    if not self.connectToDatabase(self.args.user, currentPw):
                         print "FAILED: could not connect to the database.\n";
 
                     else:
@@ -60,10 +60,15 @@ class MySQLpw(object):
     def connectToDatabase(self, user, password):
         """Establishes a connection to the local MySQL database.
            """
+        connectString = "DRIVER={MySQL};SERVER=%s;UID=%s;PWD=%s;"+
+            "DATABASE=%s" % (
+                "localhost",
+                user,
+                password,
+                "psu"
+            )
         try:
-            self.dbConnection = pyodbc.connect(
-                'DRIVER={MySQL};SERVER=localhost;PORT=3306;UID='+user+
-                ';PWD='+password)
+            self.dbConnection = pyodbc.connect(connectString)
             return True
         except:
             print "ERROR: database connection failed.\n";
