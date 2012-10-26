@@ -11,7 +11,7 @@
 import sys
 import argparse
 import getpass
-import pyodbc
+import MySQLdb
 
 
 class MySQLpw(object):
@@ -60,18 +60,16 @@ class MySQLpw(object):
     def connectToDatabase(self, user, password):
         """Establishes a connection to the local MySQL database.
            """
-        connectString = "DRIVER={MySQL};SERVER=%s;UID=%s;PWD=%s;"+
-            "DATABASE=%s" % (
-                "localhost",
-                user,
-                password,
-                "psu"
-            )
         try:
-            self.dbConnection = pyodbc.connect(connectString)
+            self.dbConnection = MySQLdb.connect(
+                host="localhost",
+                user=user,
+                passwd=password
+                )
             return True
-        except:
-            print "ERROR: database connection failed.\n";
+
+        except Exception, err:
+            sys.stderr.write("ERROR: %s\n" % str(err))
             return False
 
 
