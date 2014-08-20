@@ -17,14 +17,18 @@ To install the script, clone the repository and create a symlink for the executa
     $ sudo ln -s ../scripts/mysqlpw/mysqlpw.py ./
 
 
-## Installing easy_install and/or pip
+## Installing pip
 
-You will need easy_install or pip to install the dependencies. Pip is optional but it is the replacement for easy_install.
+You will need pip to install the dependencies.
 
-### on RedHat
+### on Debian/Ubuntu
 
-    $ sudo yum install python-setuptools
-    $ sudo easy_install pip
+    $ sudo apt-get install python-pip
+
+
+### on RedHat/CentOS
+
+    $ sudo yum install python-pip
 
 
 
@@ -32,33 +36,19 @@ You will need easy_install or pip to install the dependencies. Pip is optional b
 
 ### **argparse** is used to parse the arguments passed via the command line
 
-It can be installed via easy_install or pip:
-
-#### via easy_install
-
-    $ sudo easy_install argparse
-
-#### via pip
+It can be installed via pip:
 
     $ sudo pip install argparse
 
 
 ### **MySQLdb** is used to connect to and talk to the MySQL database
 
-It can be installed via apt-get, yum, easy_install, or pip:
+Install it using:
 
-#### via apt-get
+#### on Debian/Ubuntu
 
     $ sudo apt-get install python-mysqldb
 
-#### via yum
+#### on RedHat/CentOS
 
     $ sudo yum install MySQL-python
-
-#### via easy_install
-
-    $ sudo easy_install mysql-python
-
-#### via pip
-
-    $ sudo pip install mysql-python
