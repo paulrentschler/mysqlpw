@@ -23,8 +23,8 @@ You will need easy_install or pip to install the dependencies. Pip is optional b
 
 ### on RedHat
 
-  $ sudo yum install python-setuptools
-  $ sudo easy_install pip
+    $ sudo yum install python-setuptools
+    $ sudo easy_install pip
 
 
 
@@ -36,11 +36,11 @@ It can be installed via easy_install or pip:
 
 #### via easy_install
 
-  $ sudo easy_install argparse
+    $ sudo easy_install argparse
 
 #### via pip
 
-  $ sudo pip install argparse
+    $ sudo pip install argparse
 
 
 ### **MySQLdb** is used to connect to and talk to the MySQL database
@@ -49,16 +49,16 @@ It can be installed via apt-get, yum, easy_install, or pip:
 
 #### via apt-get
 
-  $ sudo apt-get install python-mysqldb
+    $ sudo apt-get install python-mysqldb
 
 #### via yum
 
-  $ sudo yum install MySQL-python
+    $ sudo yum install MySQL-python
 
 #### via easy_install
 
-  $ sudo easy_install mysql-python
+    $ sudo easy_install mysql-python
 
 #### via pip
 
-  $ sudo pip install mysql-python
+    $ sudo pip install mysql-python
