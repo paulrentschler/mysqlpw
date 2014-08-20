@@ -9,12 +9,12 @@ All of the built-in MySQL ways of doing this will cause the new password to be l
 
 To install the script, clone the repository and create a symlink for the executable into the appropriate bin directory.
 
-  $ cd /usr/local
-  $ sudo mkdir -p scripts/mysqlpw
-  $ cd scripts/mysqlpw
-  $ sudo hg clone https://bitbucket.org/paulrentschler/mysqlpw ./
-  $ cd ../../bin
-  $ sudo ln -s ../scripts/mysqlpw/mysqlpw.py ./
+    $ cd /usr/local
+    $ sudo mkdir -p scripts/mysqlpw
+    $ cd scripts/mysqlpw
+    $ sudo hg clone https://bitbucket.org/paulrentschler/mysqlpw ./
+    $ cd ../../bin
+    $ sudo ln -s ../scripts/mysqlpw/mysqlpw.py ./
 
 
 ## Installing easy_install and/or pip
@@ -62,4 +62,3 @@ It can be installed via apt-get, yum, easy_install, or pip:
 #### via pip
 
   $ sudo pip install mysql-python
-
